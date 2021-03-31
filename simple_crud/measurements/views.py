@@ -16,3 +16,4 @@ class MeasurementViewSet(ModelViewSet):
     # TODO: добавьте конфигурацию для измерения
     queryset = Measurement.objects.select_related('project').all()
     serializer_class = MeasurementSerializer
+

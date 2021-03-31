@@ -27,3 +27,6 @@ class Measurement(TimestampFields):
     value = models.FloatField()
     project = models.ForeignKey(Project, related_name='project', on_delete=models.CASCADE)
 
+    def __str__(self):
+        return f"Температура на объекте - {self.value}"
+

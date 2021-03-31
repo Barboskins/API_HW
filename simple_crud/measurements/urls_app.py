@@ -1,14 +1,13 @@
 from django.urls import path, include
-from rest_framework.routers import SimpleRouter
+from rest_framework.routers import  DefaultRouter
 
 from .views import ProjectViewSet, MeasurementViewSet
 
-router = SimpleRouter()
-router.register(r'projects', ProjectViewSet, basename='projects')
-router.register(r'measurements', MeasurementViewSet, basename='measurements')
+router = DefaultRouter()
+router.register('projects', ProjectViewSet)
+router.register('measurements', MeasurementViewSet)
 
 urlpatterns = router.urls
 
-# urlpatterns = [
-#     path('', include(router.urls)),
-# ]
+
+

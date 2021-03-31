@@ -1,16 +1,49 @@
 @baseURL = http://127.0.0.1:8000/api
 
-
+#projects
+#measurements
 GET {{baseURL}}/projects/
 
 ###
 
-POST {{baseURL}}/projects/
+POST {{baseURL}}/measurements/
+Content-Type: application/json
+    
+
+# {
+#     "name":"Test4",
+#     "latitude":"150",
+#     "longitude":"210",
+#     "project":[]
+    
+# }
 
 {
-    "name":"Test",
-    "latitude":"100",
-    "longitude":"200"
-    
+    "value":"17",
+    "project": "5"
 }
+
 ###
+
+
+
+
+PATCH  {{baseURL}}/projects/4/
+Content-Type: application/json
+
+{"name":"Test45"}
+
+###
+
+PUT {{baseURL}}/projects/
+Content-Type: application/json
+
+# {
+#     "name":"Test2",
+#     "latitude":"10",
+#     "longitude":"20",
+#     "project":[] 
+# }
+
+###
+DELETE {{baseURL}}/projects/1/
